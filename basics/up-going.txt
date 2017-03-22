@@ -2,3 +2,36 @@ alert(a);
 
 age=prompt("Please tell me your age:");
 console.log(age);
+
+implicit vs explicit coercion
+e.g use the loose equal operator == in "99.99"==99.99  JavaScript will convert
+the left-hand side "99.99" to its number equivalent 99.99. The comparison
+then becomes 99.99 == 99.99, which is of course true...that's implicit
+see ch1 for more detail
+
+In some programming languages, you declare a variable (container) to hold
+a specific type of value, such as number or string. Static typing, otherwise
+known as type enforcement, is typically cited as a benefit for program
+correctness by preventing unintended value conversions.
+Other languages emphasize types for values instead of variables. Weak typing,
+otherwise known as dynamic typing, allows a variable to hold any type of value
+at any time. It's typically cited as a benefit for program flexibility by
+allowing a single variable to represent a value no matter what type form that
+value may take at any given moment in the program's logic flow.
+JavaScript uses the latter approach, dynamic typing, meaning variables can hold
+values of any type without any type enforcement.
+
+console.log( amount );              // 215.9784
+console.log( amount.toFixed( 2 ) ); // "215.98"
+toFixed(..) lets us specify how many decimal places we'd like the number
+rounded to, and it produces the string as necessary.
+
+The newest version of JavaScript at the time of this writing (commonly called
+"ES6") includes a new way to declare constants, by using const instead of var:
+// as of ES6:
+const TAX_RATE = 0.08;
+
+As we discussed in "Values & Types" earlier, values that aren't already of an
+expected type are often coerced to that type. The if statement expects a
+boolean, but if you pass it something that's not already boolean, coercion
+will occur.
