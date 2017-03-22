@@ -1,18 +1,18 @@
+-----------
 alert(a);
 
 age=prompt("Please tell me your age:");
 console.log(age);
 
 implicit vs explicit coercion
-e.g use the loose equal operator == in "99.99"==99.99  JavaScript will convert
-the left-hand side "99.99" to its number equivalent 99.99. The comparison
-then becomes 99.99 == 99.99, which is of course true...that's implicit
-see ch1 for more detail
+e.g Χρήση της χαλαρής ισότητας == in "99.99"==99.99.  JavaScript μετατρέπει το
+αριστερό μέρος "99.99" σε αριθμό , δηλαδή 99.99. Ετσι η ισότητα μετατρέπεται σε
+99.99 == 99.99, δηλαδή  true...that's implicit
 
-In some programming languages, you declare a variable (container) to hold
-a specific type of value, such as number or string. Static typing, otherwise
-known as type enforcement, is typically cited as a benefit for program
-correctness by preventing unintended value conversions.
+Σε ορισμένες γλώσσες δηλώνεις μια variable (container) για να κρατήσει
+συγκεκριμένο τύπο μιας αξίας όπως number or string. Static typing ή  type
+enforcement, θεωρείται γενικά πλεονέκτημα του προγραμματισμού γιατί προλαβαίνει
+unintended value conversions.
 Other languages emphasize types for values instead of variables. Weak typing,
 otherwise known as dynamic typing, allows a variable to hold any type of value
 at any time. It's typically cited as a benefit for program flexibility by
