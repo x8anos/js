@@ -1,0 +1,26 @@
+const TAX_RATE=0.08;
+const PHONE_PRICE=300;
+const ACCESSORIE_PRICE=20;
+const SPENDING_THRESHOLD=350;
+
+//var bank_account_balance=2000;
+var phone_purchase=0;
+var total_phone_purchase=0;
+
+bank_account_balance=prompt("Please tell me your account balance:");
+console.log(bank_account_balance);
+
+do{
+    var amount=amount+PHONE_PRICE;//Stores each phones+acc value
+    while(amount<SPENDING_THRESHOLD){
+        amount=amount+ACCESSORIE_PRICE;
+    }
+    phone_purchase=phone_purchase+amount;
+}while(bank_account_balance>=phone_purchase);
+
+function calculateTotalPurchase(amount){
+        amount=amount+(amount*TAX_RATE);
+
+        return(amount);
+
+}
