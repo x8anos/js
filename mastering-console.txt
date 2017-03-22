@@ -1,0 +1,5 @@
+about:blank  starts an empty page in browser
+
+Ctlr+Shift+I  opens dev tools
+
+Shift+Enter  changes line  because just enter  runs the code
