@@ -11,16 +11,23 @@ bank_account_balance=prompt("Please tell me your account balance:");
 console.log(bank_account_balance);
 
 do{
-    var amount=amount+PHONE_PRICE;//Stores each phones+acc value
+    var amount=0;
+    amount=amount+PHONE_PRICE;//Stores each phones+acc value
     while(amount<SPENDING_THRESHOLD){
         amount=amount+ACCESSORIE_PRICE;
     }
     phone_purchase=phone_purchase+amount;
 }while(bank_account_balance>=phone_purchase);
 
-function calculateTotalPurchase(amount){
-        amount=amount+(amount*TAX_RATE);
+function calculateTotalPurchase(total_phone_purchase){
+        total_phone_purchase=phone_purchase+(phone_purchase*TAX_RATE);
 
-        return(amount);
+        return"€"+total_phone_purchase.toFixed(2);
+        }
+console.log(calculateTotalPurchase(total_phone_purchase));
 
+if (total_phone_purchase>bank_account_balance){
+  console.log("You can't afford it!");
+}else{
+  console.log("You can afford it.....go ahead");
 }
