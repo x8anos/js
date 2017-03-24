@@ -1,32 +1,36 @@
 const TAX_RATE=0.08;
-const PHONE_PRICE=300;
+const PHONE_PRICE=100;
 const ACCESSORIE_PRICE=20;
-const SPENDING_THRESHOLD=350;
-
-//var bank_account_balance=2000;
-var phone_purchase=0;
-var total_phone_purchase=0;
+const SPENDING_THRESHOLD=130;
 
 bank_account_balance=prompt("Please tell me your account balance:");
 console.log(bank_account_balance);
 
-do{
-    var amount=0;
-    amount=amount+PHONE_PRICE;//Stores each phones+acc value
-    while(amount<SPENDING_THRESHOLD){
-        amount=amount+ACCESSORIE_PRICE;
+var amount=0;
+
+function calculateTax(amount){
+        return  amount*TAX_RATE;
     }
-    phone_purchase=phone_purchase+amount;
-}while(bank_account_balance>=phone_purchase);
+function formatAmount(amount){
+        return "€"+amount.toFixed(2);
+    }
 
-function calculateTotalPurchase(total_phone_purchase){
-        total_phone_purchase=phone_purchase+(phone_purchase*TAX_RATE);
+while(amount<bank_account_balance){
+     //buy new phone
+     amount=amount+PHONE_PRICE;
+     //can we afford accessorie
+     if (amount<bank_account_balance){
+     amount=amount+ACCESSORIE_PRICE;
+     }
+}
 
-        return"€"+total_phone_purchase.toFixed(2);
-        }
-console.log(calculateTotalPurchase(total_phone_purchase));
+     //Pay taxes
+     amount=amount+calculateTax(amount);
+     //Format output
+     console.log("Your purchase:"+formatAmount(amount));
 
-if (total_phone_purchase>bank_account_balance){
+
+if (amount>bank_account_balance){
   console.log("You can't afford it!");
 }else{
   console.log("You can afford it.....go ahead");
