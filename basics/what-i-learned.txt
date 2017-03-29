@@ -1,0 +1,11 @@
+27-3-16
+Γενικά χαρακτηριστικά των όρων της JS:
+Function Scope
+Hoisting
+Nested Scopes
+Conditionals
+Strict Mode
+Function as Value
+Immediately Invoked Function Expressions
+Closure
+Module
