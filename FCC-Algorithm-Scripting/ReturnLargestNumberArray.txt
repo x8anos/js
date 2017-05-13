@@ -1,0 +1,34 @@
+Επιστροφή πίνακα ο οποίος περιέχει τον μεγαλύτερο αριθμό από κάθε υποπίνακα που
+περιέχει:
+------------------ΗΜΙΤΕΛΗΣ------------------------------------------------------
+function largestOfFour(arr) {
+  var max=[];
+  for(var i=0;i<arr.length;i++){
+   for(var j=0;j<arr[i].length;j++){
+       max[i]=arr[i][j];  //εδώ δεν έχουμε συνθήκη καταλήγουμε να δίνουμε την
+                          //την τελευταία τιμή κάθε υποπίνακα δηλαδή[3,26,39,1]
+     }
+   }
+  return max;
+}
+largestOfFour([[4,5,1,3],[13,27,18,26],[32,35,37,39],[1000,1001,857,1]]);
+
+-------------Επιστροφή του μεγαλύτερου αριθμού σε πίνακα------------------------
+
+var arr=[2,4,1,4,5];
+function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}
+getMaxOfArray(arr);       //5
+---------ΑΠΑΝΤΗΣΗ---------------------------------------------------------------
+function getMaxOfArray(numArray) {
+         return Math.max.apply(null, numArray);
+          }
+function largestOfFour(arr) {
+  var meg=[];
+    for(var i=0;i<arr.length;i++){
+      meg[i]=getMaxOfArray(arr[i]);
+   }
+  return meg;
+}
+largestOfFour([[15,5,1,3],[13,6,18,26],[32,35,37, 39], [1000, 1001, 857, 1]]);

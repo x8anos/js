@@ -1,1 +1,45 @@
-dfsdf
+-----------------return words length from string---------------------------------------
+function findLongestWord(str) {
+   var result="";
+   var tempArr=[];
+   tempArr=str.split(" ");
+
+   return tempArr[2].length;
+}
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
+--------------------------------------------------------------------------------
+This version does not work with all cases because the comparison is only kept
+between 2 words there is not a variable to hold the max each time....
+
+
+function findLongestWord(str) {
+   var tempArr=[];
+   tempArr=str.split(" ");
+    var count=tempArr[0].length;
+    for(var i=1;i<tempArr.length;i++){
+       if(tempArr[i].length>tempArr[i-1].length){
+          count=tempArr[i].length;
+       }
+    }
+   return count;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
+
+----------------------The fix---------------------------------------------------
+Just replace  in the if statement the second value:
+
+function findLongestWord(str) {
+   var tempArr=[];
+   tempArr=str.split(" ");
+    var count=tempArr[0].length;
+    for(var i=1;i<tempArr.length;i++){
+       if(tempArr[i].length>count){
+          count=tempArr[i].length;
+       }
+    }
+   return count;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
